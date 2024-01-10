@@ -2,7 +2,7 @@
   "name": "tum-spirit-dashboard",
   "version": "1.0.0",
   "private": true,
-  "homepage": "/sign-in",
+  "homepage": "/",
   "dependencies": {
     "@ant-design/icons": "^4.8.0",
     "@essetwide/material-walkthrough": "^1.0.1",

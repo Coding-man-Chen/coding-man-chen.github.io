@@ -14,13 +14,13 @@ function App() {
   return (
     <div className="App">
       <Switch>
-        <Route path="/sign-in" exact component={SignIn} />
+        <Route path="/" exact component={SignIn} />
         <Main>
           <Route exact path="/chat" component={Chat} />
           <Route exact path="/kanban" component={Kanban} />
           <Route exact path="/team" component={Team} />
           <Route exact path="/documents" component={Documents} />
-          <Redirect from="*" to="/kanban" />
+          {/* <Redirect from="*" to="/sign-in" /> */}
         </Main>
       </Switch>
     </div>

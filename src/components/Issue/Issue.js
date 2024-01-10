@@ -62,9 +62,7 @@ const Issue = ({ item, isFirstColumn, isLastColumn, onEdit, onRemove, onMoveToLe
 			<Paragraph className="mh-100 description card-para" style={{ height: '110px', overflow: 'auto' }}>
 				{item.description}
 			</Paragraph>
-			{item.tag.map(tag => (
-				<Tag color={tag.value} style={{ paddingLeft: 15, paddingRight: 15, fontSize: 15 }}>{tag.label}</Tag>
-			))}
+			{item.tag ? item.tag.map(tag => (<Tag color={tag.value} style={{ paddingLeft: 15, paddingRight: 15, fontSize: 15 }}>{tag.label}</Tag>)) : ''}
 			<br />
 			<Avatar.Group style={{ display: 'flex', float: 'right' }}>
 				<Avatar

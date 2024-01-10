@@ -6,37 +6,26 @@ export const generateBoard = () => {
 		? Storage.getItem('kanbanBoardData')
 		: [
 			{
-				timeline:1,
+				timeline:0,
 				id: uuidv4(),
 				title: 'READY FOR DEV',
 				issues: [
-					{ id: uuidv4(), title: 'Issue 1', description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.' },
-					{ id: uuidv4(), title: 'Issue 2', description: 'use a passage of Lorem Ipsum, you need to be sure there isn\'t anything embarrassing hidden in the middle of text.' },
-					{ id: uuidv4(), title: 'Issue 3', description: 'ype specimen book. It has survived not only five centuries.' }
+					{ id: uuidv4(), title: 'Draw Personas and Scenarios', description: 'depend on the user group, draw the personas and in some situation make sure scenarios',timeline: 1,person: "Clara Copyright",tag:[{label: 'User Research', value: 'gold', key: 'gold'},{label: 'LOFI', value: 'lime', key: 'lime'}] },
+					{ id: uuidv4(), title: 'Draw Lofi Prototype of Project', description: 'fix all the necessary screens and draw the structure of the screens in Figma',timeline: 2,person: "John Johnson",tag:[{label: 'LOFI', value: 'lime', key: 'lime'}] },
 				]
 			},
 			{
-				timeline:1,
 				id: uuidv4(),
 				title: 'IN DEVELOPMENT',
 				issues: [
-					{ id: uuidv4(), title: 'Issue 1', description: 'use a passage of Lorem Ipsum, you need to be sure there isn\'t anything embarrassing hidden in the middle of text.' },
+					{ id: uuidv4(), title: 'Organize the opinions given by tutor', description: 'organize the opinions given by the tutor into a word document',timeline: 2,person: "John Johnson",tag:[{label: 'User Research', value: 'gold', key: 'gold'}] },
 				]
 			},
 			{
-				timeline:1,
+				timeline:2,
 				id: uuidv4(),
 				title: 'IN TEST',
-				issues: []
+				issues: [{ id: uuidv4(), title: 'Draw Hifi Prototype', description: 'improve Lofi Prototype and determine style, fonts and icons for all screens',timeline: 0,person: "Max Muster",tag:[{label: 'HIFI', value: 'green', key: 'green'},{label: 'LOFI', value: 'lime', key: 'lime'}] },]
 			},
-			{
-				timeline:1,
-				id: uuidv4(),
-				title: 'DONE',
-				issues: [
-					{ id: uuidv4(), title: 'Issue 1', description: 'Contrary to popular belief, Lorem Ipsum is not simply random text.' },
-					{ id: uuidv4(), title: 'Issue 2', description: 'It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source.' }
-				]
-			}
 		];
 };
